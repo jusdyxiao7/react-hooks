@@ -14,3 +14,15 @@ npm start
 ## 使用useStateHook
 
 
+
+## 安装 axios
+
+调用 dog.api 获取小狗图片
+
+https://dog.ceo/dog-api/
+
+
+```
+npm install axios --save
+```
+

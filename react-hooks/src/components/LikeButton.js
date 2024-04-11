@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, {useEffect, useState} from 'react'
+import useMousePosition from "../hooks/useMousePosition";
 
 const LikeButton = () => {
-    // useState(0) 表示 初始值 为 0 
+    // 各个组件中引入后，声明就可以直接使用
+    const mousePosition = useMousePosition();
+
+    // useState(0) 表示 初始值 为 0
     // 返回的是一个数组，两个分别代表：当前值和更新函数
     // 定义一个 stat 变量 like
 
@@ -30,6 +34,7 @@ const LikeButton = () => {
     return (
         // <></> 表示 react的空节点
         <>
+            <p>{mousePosition.y}</p>
             <button onClick={() => setLike(like + 1)}>
                 {like} 赞~
             </button>
